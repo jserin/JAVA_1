@@ -319,7 +319,7 @@ public class Main {
 
         //연습문제 오리
         // 출력 : 오리가 날개로 날아갑니다.
-        System.out.println("== 청둥오리 ==");
+        /* System.out.println("== 청둥오리 ==");
         청둥오리 a청둥오리 = new 청둥오리();
         a청둥오리.날다();
         a청둥오리.수영하다();
@@ -339,13 +339,179 @@ public class Main {
         a고무2오리.날다();
         a고무2오리.수영하다();
 
-        System.out.println("== 로봇오리 ==");
-        로봇오리 a로봇오리 = new 로봇오리();
-        a로봇오리.날다(); // 오리가 날개로 날아갑니다.
-        a로봇오리.수영하다(); // 오리가 물에 둥둥 떠다닙니다.
+         */
 
-        System.out.println("0313 연습");
 
+        // 0314
+        /* 칼 a칼 = new 칼();
+        a칼 = new 활();
+
+        무기 a무기 = new 칼();
+        a무기.공격();
+        a무기.방어();
+
+        // tv
+        TV a리모콘 = new 삼성TV();
+        a리모콘.채널업();
+
+         */
+
+        //전사
+        /* 전사 a전사 = new 전사();
+        a전사.공격("브라이언", "칼");
+        a전사.재공격();
+        a전사.공격("필립", "창");
+        a전사.공격("마크", "지팡이");
+        a전사.재공격();
+        a전사.재공격(); */
+
+        //전사2
+        /* 전사 a전사 = new 전사();
+        a전사.공격("브라이언", "칼");
+        a전사.재공격();
+        a전사.공격("필립", "창");
+        a전사.공격("마크", "지팡이");
+        a전사.재공격();
+        a전사.재공격();
+
+         */
+
+        //형변환
+        /* 샤오미tv a샤오미tv = new 샤오미tv();
+        삼성tv a삼성tv = new 삼성tv();
+        LGtv aLGtv = new LGtv();
+
+        a샤오미tv.켜기();
+        a샤오미tv.끄기();
+        a샤오미tv.vr켜기();
+
+        a삼성tv.켜기();
+        a삼성tv.끄기();
+        a삼성tv.ar켜기();
+
+        aLGtv.켜기();
+        aLGtv.끄기();
+        aLGtv.게임모드전환();
+
+        System.out.println("== 표준tv 리모콘 ==");
+        표준tv a표준tv = new 샤오미tv();
+        a표준tv.켜기();
+        a표준tv.끄기(); */
+
+        //수동 형변환
+        /* double d = 1.7;
+        int i = (int) d;
+        System.out.println(i);
+         */
+        /* int i = 10;
+        double d = i;
+        i = (int) d;
+
+        System.out.println(i);
+
+        //수동 형변환 예제
+        페라리 a페라리 = new 페라리();
+
+        자동차 a자동차 = (자동차)a페라리;
+
+        a자동차 = a페라리;
+
+        페라리 a페라리2 = (페라리)a자동차;
+        a페라리2.뚜껑이_열리다();
+
+         */
+
+        //0315
+        /* 전사 a전사 = new 전사();
+        a전사.이름 = "카니";
+        a전사.나이 = 22;
+        a전사.a무기 = new 칼();
+        a전사.공격();
+
+        a전사.이름 = "초코";
+        a전사.a무기 = new 활();
+        a전사.공격(); */
+
+        /* int i = 로봇.get정수();
+        boolean b = 로봇.get논리();
+        사람 a사람 = 로봇.get사람();
+        사람 a사람 = 로봇.get사람(); */
+
+
+        /* 사람1 a사람 = new 사람1();
+        a사람.달리기_속력 = 20;
+        a사람.달리다();
+        // 사람이 20km/h로 달립니다.
+        a사람.달리다();
+        // 사람이 20km/h로 달립니다.
+
+        a사람.달리기_속력 = 50;
+        a사람.달리다();
+        // 사람이 50km/h로 달립니다. */
+
+        /* 사람1 a사람 = new 사람1();
+
+        a사람.나이 = 20;
+        a사람.a왼팔 = new 팔();
+
+        전사 a전사 = new 전사();
+
+        a전사.나이 = 20;
+        a전사.a무기 = new 활();
+        a전사.a무기 = new 칼();
+         */
+
+        전사 a전사 = new 전사();
+
+        String 이름 = "칸";
+        a전사.이름 = 이름;
+        a전사.나이 = 20;
+        a전사.자기소개();
+
+        a전사.나이++;
+        a전사.자기소개();
+
+        a전사.나이 = 30;
+        a전사.이름 = "카니";
+        a전사.자기소개();
+
+        a전사.a무기 = new 활();
+        a전사.공격();
+        // 출력 : 카니가 활로 공격합니다.
+
+        a전사.a무기 = new 칼();
+        a전사.공격();
+        // 출력 : 카니가 칼로 공격합니다.
+
+
+    }
+}
+
+//0315 전사 문제
+class 전사 {
+    String 이름;
+    int 나이;
+    무기 a무기;
+    void 자기소개() {
+        System.out.println("안녕하세요, 저는 " + this.이름 + "이고 나이는 " + this.나이 + " 입니다.");
+    }
+    void 공격() {
+        a무기.사용자명 = this.이름;
+        a무기.실행();
+    }
+}
+abstract class 무기 {
+    String 사용자명;
+    abstract void 실행 ();
+}
+class 칼 extends 무기 {
+    void 실행 () {
+        System.out.println( 사용자명 + "가 칼로 공격합니다.");
+    }
+}
+class 활 extends 무기 {
+    void 실행 () {
+        System.out.println( 사용자명 + "가 활로 공격합니다.");
     }
 }
 
@@ -466,7 +632,7 @@ class graycat extends cat {
 
  */
 
-class 오리 {
+/* class 오리 {
     void 날다() {
         System.out.println("오리가 날개로 날아갑니다.");
     }
@@ -490,4 +656,154 @@ class 고무오리 extends 오리 {
 
 class 고무2오리 extends 고무오리 {}
 
-class 로봇오리 extends 오리 {}
+class 로봇오리 extends 오리 {} */
+
+//전역변수, 지역변수
+/* class 전사 {
+    String name;
+    String wp;
+    void 공격(String name, String wp){
+        this.name = name;
+        this.wp = wp;
+        공격출력(this.name, this.wp);
+    }
+    void 재공격() {
+        공격출력(this.name, this.wp);
+    }
+    void 공격출력(String name, String wp){
+        System.out.println(this.name + "(이)가 " + this.wp + "으로 공격합니다.");
+    }
+}
+
+ */
+
+/* class 전사 {
+    String name;
+    String weapon;
+    void 공격(String name, String weapon) {
+        System.out.printf("%s(이)가 %s로 공격합니다. \n", name, weapon);
+        this.name = name;
+        this.weapon = weapon;
+    }
+    void 재공격() {
+        System.out.printf("%s(이)가 %s로 공격합니다. \n", this.name, this.weapon);
+    }
+}
+
+ */
+
+/* abstract class 표준tv {
+    abstract void 켜기();
+    abstract void 끄기();
+}
+
+class 샤오미tv extends 표준tv {
+    void 켜기(){
+        System.out.println("샤오미tv 켜집니다.");
+    }
+    void 끄기(){
+        System.out.println("샤오미tv 꺼집니다.");
+    }
+    void vr켜기(){
+        System.out.println("샤오미tv vr켜기");
+    }
+}
+class 삼성tv {
+    void 켜기(){
+        System.out.println("삼성tv 켜집니다.");
+    }
+    void 끄기(){
+        System.out.println("삼성tv 꺼집니다.");
+    }
+    void ar켜기(){
+        System.out.println("삼성tv ar켜기");
+    }
+}
+class LGtv {
+    void 켜기(){
+        System.out.println("LGtv 켜집니다.");
+    }
+    void 끄기(){
+        System.out.println("LGtv 꺼집니다.");
+    }
+    void 게임모드전환(){
+        System.out.println("LGtv 게임모드전환");
+    }
+}
+
+class 자동차 {
+    void 달리다() {}
+    void 서다(){}
+}
+class 페라리 extends 자동차 {
+    void 뚜껑이_열리다(){
+        System.out.println("페라리 뚜껑 열림");
+    }
+}
+
+ */
+
+/* class 전사 {
+    String 이름;
+    int 나이;
+    무기 a무기;
+    void 공격() {
+        a무기.실행(this.이름);
+    }
+}
+abstract class 무기 {
+    abstract void 실행 (String 이름);
+}
+class 칼 extends 무기 {
+    void 실행(String 이름) {
+        System.out.println(이름 + "(이)가 칼로 공격합니다.");
+    }
+}
+class 활 extends 무기 {
+    void 실행(String 이름) {
+        System.out.println(이름 + "(이)가 활로 공격합니다.");
+    }
+}
+
+ */
+
+/* class 로봇  {
+    static int get정수(){
+        return 1;
+    }
+    static boolean get논리(){
+        return true;
+    }
+    static 사람 get사람(){
+        return new 사람();
+    }
+    static 사람 get사람2(){
+        return new 사람();
+    }
+
+}
+
+class 사람 {
+    static 사람 a사람;
+
+} */
+
+/* class 사람1 {
+    int 달리기_속력;
+    void 달리다() {
+        System.out.println("사람이 " + this.달리기_속력 + "km/h로 달립니다.");
+    }
+    int 나이;
+    팔 a왼팔;
+}
+class 팔 { }
+
+class 전사 {
+    int 나이;
+    무기 a무기;
+}
+class 무기 {}
+class 활 extends 무기 {}
+class 칼 extends 무기 {}
+
+ */
